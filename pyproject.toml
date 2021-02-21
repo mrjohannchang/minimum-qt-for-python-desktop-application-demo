@@ -1,17 +1,28 @@
 [tool.poetry]
-name = "python-gui-application-with-database-demo-for-sony"
+name = "python-gui-application-with-database-demo"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-homepage = "https://github.com/FloTechnologies/uni-provisioner"
+homepage = "https://github.com/changyuheng/python-gui-application-with-database-demo"
+packages = [
+    {include = "cli_demo", from = "packages"},
+    {include = "desktop_demo", from = "packages"},
+    {include = "sdk_demo", from = "packages"},
+]
 
 [tool.poetry.dependencies]
 python = "~3.9"
 dataset = "^1.4.5"
 PySide6 = "^6.0.1"
+dacite = "^1.6.0"
 
 [tool.poetry.dev-dependencies]
+toml = "^0.10.2"
+
+[tool.poetry.scripts]
+cli-demo = 'cli_demo.cli_demo:main'
+desktop-demo = 'desktop_demo.desktop_demo:main'
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

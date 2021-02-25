@@ -18,6 +18,7 @@ PySide6 = "^6.0.1"
 dacite = "^1.6.0"
 
 [tool.poetry.dev-dependencies]
+pyinstaller = "^4.2"
 toml = "^0.10.2"
 
 [tool.poetry.scripts]

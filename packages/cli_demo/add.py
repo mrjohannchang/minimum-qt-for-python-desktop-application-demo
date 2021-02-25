@@ -1,9 +1,9 @@
 import argparse
 
-import sdk_demo as sdk
 import dacite
+import sdk_demo as sdk
 
 
-def add(args: argparse.Namespace):
+def add(args: argparse.Namespace) -> None:
     datum: sdk.Datum = dacite.from_dict(data_class=sdk.Datum, data=args.__dict__)
     sdk.add_datum(database_path=args.database, datum=datum)

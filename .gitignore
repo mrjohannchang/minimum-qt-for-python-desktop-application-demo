@@ -316,5 +316,5 @@ $RECYCLE.BIN/
 # }}}
 
 # This project {{{
-config.toml
+default.db*
 # }}}

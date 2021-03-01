@@ -2,6 +2,9 @@
 
 [![Python GUI Application with Database Demo](http://img.youtube.com/vi/Fae89t8lfgc/0.jpg)](http://www.youtube.com/watch?v=Fae89t8lfgc "Python GUI Application with Database Demo")
 
+**This is only for demo and reference.** 
+Only inputs on the left most column work now!
+
 ## Installation
 
 Install with [pip](https://pip.pypa.io/en/stable/) or download the pre-compiled executable file from [here](https://github.com/changyuheng/python-gui-application-with-database-demo/tags).
@@ -50,3 +53,7 @@ poetry run pyinstaller --add-data packages\desktop_demo\ui\main_window.ui;deskto
 ## References
 
 1. [My Python Development Environment, 2020 Edition](https://jacobian.org/2019/nov/11/python-environment-2020/)
+
+## License
+
+[Mozilla Public License Version 2.0](https://www.mozilla.org/en-US/MPL/2.0/)

@@ -4,8 +4,8 @@ import importlib.resources
 from typing import Optional
 
 import sdk_demo as sdk
-import PySide6.QtGui
-import PySide6.QtXml
+import PySide6.QtGui  # This is only for PyInstaller to parse properly
+import PySide6.QtXml  # This is only for PyInstaller to parse properly
 from PySide6.QtCore import QIODevice, QFile
 from PySide6.QtUiTools import QUiLoader
 from PySide6.QtWidgets import QLineEdit, QListWidget, QMainWindow, QPushButton

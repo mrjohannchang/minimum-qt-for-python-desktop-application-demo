@@ -1,5 +1,7 @@
 # Python GUI Application with Database Demo
 
+[![Python GUI Application with Database Demo](http://img.youtube.com/vi/Fae89t8lfgc/0.jpg)](http://www.youtube.com/watch?v=Fae89t8lfgc "Python GUI Application with Database Demo")
+
 ## Installation
 
 Install with [pip](https://pip.pypa.io/en/stable/) or download the pre-compiled executable file from [here](https://github.com/changyuheng/python-gui-application-with-database-demo/tags).

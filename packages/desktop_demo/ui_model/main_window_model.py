@@ -1,3 +1,5 @@
+import os
+
 import sdk_demo as sdk
 
 from .ui_model import UIModel
@@ -8,7 +10,7 @@ class MainWindowModel(UIModel):
         super().__init__()
         self.datum: sdk.Datum = sdk.Datum()
         self.database_path: str = sdk.default_database
-        self._ids: list[int] = list(sdk.get_ids(self.database_path))
+        self._ids: list[int] = list()
 
     def create_datum(self):
         sdk.add_datum(self.database_path, datum=sdk.Datum())
@@ -32,7 +34,8 @@ class MainWindowModel(UIModel):
         self.hct = datum.hct
 
     def update_ids(self):
-        self.ids = list(sdk.get_ids(self.database_path))
+        if os.path.isfile(self.database_path):
+            self.ids = list(sdk.get_ids(self.database_path))
 
     @property
     def ids(self) -> list[int]:

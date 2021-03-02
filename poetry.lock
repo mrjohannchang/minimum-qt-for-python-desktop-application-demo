@@ -22,7 +22,7 @@ python-versions = "*"
 
 [[package]]
 name = "banal"
-version = "1.0.4"
+version = "1.0.6"
 description = "Commons of banal micro-functions for Python."
 category = "main"
 optional = false
@@ -50,13 +50,13 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.extras]
+dev = ["pip", "nose", "wheel", "flake8", "coverage", "psycopg2-binary", "pymysql", "cryptography"]
+
 [package.dependencies]
 alembic = ">=0.6.2"
 banal = ">=1.0.1"
 sqlalchemy = ">=1.3.2"
-
-[package.extras]
-dev = ["pip", "nose", "wheel", "flake8", "coverage", "psycopg2-binary", "pymysql", "cryptography"]
 
 [[package]]
 name = "future"
@@ -65,6 +65,7 @@ description = "Clean single-source support for Python 3 and 2"
 category = "dev"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+marker = "sys_platform == \"win32\""
 
 [[package]]
 name = "macholib"
@@ -73,6 +74,7 @@ description = "Mach-O header analysis and editing"
 category = "dev"
 optional = false
 python-versions = "*"
+marker = "sys_platform == \"darwin\""
 
 [package.dependencies]
 altgraph = ">=0.15"
@@ -85,12 +87,12 @@ category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
-[package.dependencies]
-MarkupSafe = ">=0.9.2"
-
 [package.extras]
 babel = ["babel"]
 lingua = ["lingua"]
+
+[package.dependencies]
+MarkupSafe = ">=0.9.2"
 
 [[package]]
 name = "markupsafe"
@@ -107,9 +109,21 @@ description = "Python PE parsing module"
 category = "dev"
 optional = false
 python-versions = "*"
+marker = "sys_platform == \"win32\""
 
 [package.dependencies]
 future = "*"
+
+[[package]]
+name = "pydeps"
+version = "1.9.13"
+description = "Display module dependencies"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+stdlib-list = "*"
 
 [[package]]
 name = "pyinstaller"
@@ -119,16 +133,17 @@ category = "dev"
 optional = false
 python-versions = ">=3.5"
 
-[package.dependencies]
-altgraph = "*"
-macholib = {version = ">=1.8", markers = "sys_platform == \"darwin\""}
-pefile = {version = ">=2017.8.1", markers = "sys_platform == \"win32\""}
-pyinstaller-hooks-contrib = ">=2020.6"
-pywin32-ctypes = {version = ">=0.2.0", markers = "sys_platform == \"win32\""}
-
 [package.extras]
 encryption = ["tinyaes (>=1.0.0)"]
 hook_testing = ["pytest (>=2.7.3)", "execnet (>=1.5.0)", "psutil"]
+
+[package.dependencies]
+altgraph = "*"
+macholib = ">=1.8"
+pefile = ">=2017.8.1"
+pyinstaller-hooks-contrib = ">=2020.6"
+pywin32-ctypes = ">=0.2.0"
+setuptools = "*"
 
 [[package]]
 name = "pyinstaller-hooks-contrib"
@@ -175,6 +190,7 @@ description = ""
 category = "dev"
 optional = false
 python-versions = "*"
+marker = "sys_platform == \"win32\""
 
 [[package]]
 name = "shiboken6"
@@ -213,6 +229,17 @@ postgresql_psycopg2cffi = ["psycopg2cffi"]
 pymysql = ["pymysql (<1)", "pymysql"]
 
 [[package]]
+name = "stdlib-list"
+version = "0.8.0"
+description = "A list of Python Standard Libraries (2.6-7, 3.2-9)."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+develop = ["sphinx"]
+
+[[package]]
 name = "toml"
 version = "0.10.2"
 description = "Python Library for Tom's Obvious, Minimal Language"
@@ -221,9 +248,8 @@ optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [metadata]
-lock-version = "1.1"
 python-versions = "~3.9"
-content-hash = "a7ca968eddc18e7898a964f20576047be7285783a19cb8ad843548b77fc0d121"
+content-hash = "cb64f44268948ef20fab31d12cdfb318300fb7e93ac02b3d64af337b3d61072e"
 
 [metadata.files]
 alembic = [
@@ -234,8 +260,8 @@ altgraph = [
     {file = "altgraph-0.17.tar.gz", hash = "sha256:1f05a47122542f97028caf78775a095fbe6a2699b5089de8477eb583167d69aa"},
 ]
 banal = [
-    {file = "banal-1.0.4-py2.py3-none-any.whl", hash = "sha256:939c5e03822e9a4446abfead6b30e3480a8e03c5bab55ac23993aa138c92ac99"},
-    {file = "banal-1.0.4.tar.gz", hash = "sha256:7940f0a32d8b4a52a94dd52d79d8d49f51c8dcc61a23a3c69a58a40129d98cc3"},
+    {file = "banal-1.0.6-py2.py3-none-any.whl", hash = "sha256:877aacb16b17f8fa4fd29a7c44515c5a23dc1a7b26078bc41dd34829117d85e1"},
+    {file = "banal-1.0.6.tar.gz", hash = "sha256:2fe02c9305f53168441948f4a03dfbfa2eacc73db30db4a93309083cb0e250a5"},
 ]
 dacite = [
     {file = "dacite-1.6.0-py3-none-any.whl", hash = "sha256:4331535f7aabb505c732fa4c3c094313fc0a1d5ea19907bf4726a7819a68b93f"},
@@ -283,15 +309,14 @@ markupsafe = [
     {file = "MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:ba59edeaa2fc6114428f1637ffff42da1e311e29382d81b339c1817d37ec93c6"},
     {file = "MarkupSafe-1.1.1-cp37-cp37m-win32.whl", hash = "sha256:b00c1de48212e4cc9603895652c5c410df699856a2853135b3967591e4beebc2"},
     {file = "MarkupSafe-1.1.1-cp37-cp37m-win_amd64.whl", hash = "sha256:9bf40443012702a1d2070043cb6291650a0841ece432556f784f004937f0f32c"},
-    {file = "MarkupSafe-1.1.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:6788b695d50a51edb699cb55e35487e430fa21f1ed838122d722e0ff0ac5ba15"},
-    {file = "MarkupSafe-1.1.1-cp38-cp38-manylinux1_i686.whl", hash = "sha256:cdb132fc825c38e1aeec2c8aa9338310d29d337bebbd7baa06889d09a60a1fa2"},
-    {file = "MarkupSafe-1.1.1-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:13d3144e1e340870b25e7b10b98d779608c02016d5184cfb9927a9f10c689f42"},
-    {file = "MarkupSafe-1.1.1-cp38-cp38-win32.whl", hash = "sha256:596510de112c685489095da617b5bcbbac7dd6384aeebeda4df6025d0256a81b"},
-    {file = "MarkupSafe-1.1.1-cp38-cp38-win_amd64.whl", hash = "sha256:e8313f01ba26fbbe36c7be1966a7b7424942f670f38e666995b88d012765b9be"},
     {file = "MarkupSafe-1.1.1.tar.gz", hash = "sha256:29872e92839765e546828bb7754a68c418d927cd064fd4708fab9fe9c8bb116b"},
 ]
 pefile = [
     {file = "pefile-2019.4.18.tar.gz", hash = "sha256:a5d6e8305c6b210849b47a6174ddf9c452b2888340b8177874b862ba6c207645"},
+]
+pydeps = [
+    {file = "pydeps-1.9.13-py2-none-any.whl", hash = "sha256:a4a9fc7470e9ab39495e04613fd4b8b262a7a62518322efef345ce56e7035ec1"},
+    {file = "pydeps-1.9.13.tar.gz", hash = "sha256:4f1810814aefe9822db041696e3d845d3ac499574d19cdaa9cf933170248d143"},
 ]
 pyinstaller = [
     {file = "pyinstaller-4.2.tar.gz", hash = "sha256:f5c0eeb2aa663cce9a5404292c0195011fa500a6501c873a466b2e8cad3c950c"},
@@ -370,6 +395,10 @@ sqlalchemy = [
     {file = "SQLAlchemy-1.3.23-cp39-cp39-win32.whl", hash = "sha256:94208867f34e60f54a33a37f1c117251be91a47e3bfdb9ab8a7847f20886ad06"},
     {file = "SQLAlchemy-1.3.23-cp39-cp39-win_amd64.whl", hash = "sha256:f4d972139d5000105fcda9539a76452039434013570d6059993120dc2a65e447"},
     {file = "SQLAlchemy-1.3.23.tar.gz", hash = "sha256:6fca33672578666f657c131552c4ef8979c1606e494f78cd5199742dfb26918b"},
+]
+stdlib-list = [
+    {file = "stdlib-list-0.8.0.tar.gz", hash = "sha256:a1e503719720d71e2ed70ed809b385c60cd3fb555ba7ec046b96360d30b16d9f"},
+    {file = "stdlib_list-0.8.0-py3-none-any.whl", hash = "sha256:2ae0712a55b68f3fbbc9e58d6fa1b646a062188f49745b495f94d3310a9fdd3e"},
 ]
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},

@@ -94,15 +94,22 @@ def parse_args() -> argparse.Namespace:
         help="show corresponding data when IDs are given, otherwise, show the numbers of IDs")
     subparser_show.set_defaults(func=show)
 
-    return parser.parse_args()
+    args: argparse.Namespace = parser.parse_args()
+    if not hasattr(args, 'func'):
+        parser.print_help(file=sys.stderr)
+        raise NotImplementedError
+
+    return args
 
 
-def main() -> int:
+def main():
     try:
         args: argparse.Namespace = parse_args()
-        tx: dataset.Database
+    except NotImplementedError:
+        sys.exit(2 if os.name == 'nt' else os.EX_USAGE)
+
+    try:
         args.func(args)
     except Exception as e:
         print(e, file=sys.stderr)
-        return 1 if os.name == 'nt' else os.EX_SOFTWARE
-    return 0 if os.name == 'nt' else os.EX_OK
+        sys.exit(1 if os.name == 'nt' else os.EX_SOFTWARE)

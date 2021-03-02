@@ -2,8 +2,7 @@
 
 [![Python GUI Application with Database Demo](http://img.youtube.com/vi/Fae89t8lfgc/0.jpg)](http://www.youtube.com/watch?v=Fae89t8lfgc "Python GUI Application with Database Demo")
 
-**This is only for demo and reference.** 
-Only inputs on the left most column work now!
+**This is only for demo and reference.** Only inputs on the left most column work now!
 
 ## Installation
 
@@ -23,7 +22,7 @@ desktop-demo
 
 ### Environment
 
-1. [Python 3.9.2+](https://www.python.org/downloads/release/python-392/)
+1. [Python 3.9+](https://www.python.org/downloads/release/python-391/)
 2. [Poetry](https://python-poetry.org/)
 3. [PyCharm](https://www.jetbrains.com/pycharm/)
 
@@ -39,7 +38,7 @@ poetry install
 ```
 poetry run pyinstaller --add-data packages\desktop_demo\ui\main_window.ui;desktop_demo\ui --onefile .venv\Scripts\desktop-demo
 ```
-   
+
 ### Key libraries
 
 1. [dataset](https://dataset.readthedocs.io/en/latest/)

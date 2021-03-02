@@ -33,6 +33,7 @@ desktop-demo
 1. [Python 3.9+](https://www.python.org/downloads/release/python-391/)
 2. [Poetry](https://python-poetry.org/)
 3. [PyCharm](https://www.jetbrains.com/pycharm/)
+4. [Git](https://git-scm.com/)
 
 ### Setup
 
@@ -43,8 +44,16 @@ poetry install
 
 ### Packaging
 
+#### CLI app
+
 ```
-poetry run pyinstaller --add-data packages/desktop_demo/ui/main_window.ui;desktop_demo/ui --onefile .venv/Scripts/desktop-demo
+poetry run pyinstaller --clean cli-demo.spec
+```
+
+#### Desktop app
+
+```
+poetry run pyinstaller --clean desktop-demo.spec
 ```
 
 ### Key libraries

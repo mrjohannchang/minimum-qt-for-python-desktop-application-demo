@@ -1,4 +1,4 @@
-# Python GUI Application with Database Demo
+# Python CLI and GUI Application with Database Demo
 
 [![Python GUI Application with Database Demo](http://img.youtube.com/vi/Fae89t8lfgc/0.jpg)](http://www.youtube.com/watch?v=Fae89t8lfgc "Python GUI Application with Database Demo")
 
@@ -6,13 +6,21 @@
 
 ## Installation
 
-Install with [pip](https://pip.pypa.io/en/stable/) or download the pre-compiled executable file from [here](https://github.com/changyuheng/python-gui-application-with-database-demo/tags).
+Install with [pip](https://pip.pypa.io/en/stable/) or download the pre-compiled executable file from [here](https://github.com/changyuheng/python-cli-and-gui-application-with-database-demo/tags).
 
 ```
-pip install git+https://github.com/changyuheng/python-gui-application-with-database-demo.git
+pip install git+https://github.com/changyuheng/python-cli-and-gui-application-with-database-demo.git
 ```
 
 ## Usage
+
+### CLI
+
+```
+cli-demo
+```
+
+### Desktop
 
 ```
 desktop-demo
@@ -36,7 +44,7 @@ poetry install
 ### Packaging
 
 ```
-poetry run pyinstaller --add-data packages\desktop_demo\ui\main_window.ui;desktop_demo\ui --onefile .venv\Scripts\desktop-demo
+poetry run pyinstaller --add-data packages/desktop_demo/ui/main_window.ui;desktop_demo/ui --onefile .venv/Scripts/desktop-demo
 ```
 
 ### Key libraries

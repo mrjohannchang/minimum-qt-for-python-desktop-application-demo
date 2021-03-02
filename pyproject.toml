@@ -1,8 +1,9 @@
 [tool.poetry]
 name = "python-gui-application-with-database-demo"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "A demo project including CLI and desktop GUI"
+license = "MPL-2.0"
+authors = ["Henry Chang <mr.changyuheng@gmail.com>"]
 readme = "README.md"
 homepage = "https://github.com/changyuheng/python-gui-application-with-database-demo"
 packages = [
@@ -21,7 +22,6 @@ pydeps = "^1.9.13"
 [tool.poetry.dev-dependencies]
 pydeps = "^1.9.13"
 pyinstaller = "^4.2"
-toml = "^0.10.2"
 
 [tool.poetry.scripts]
 cli-demo = 'cli_demo.cli_demo:main'

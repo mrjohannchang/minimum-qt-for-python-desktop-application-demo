@@ -7,3 +7,7 @@ class QMainWindowExt(QMainWindow):
     def closeEvent(self, event: QCloseEvent) -> None:
         sdk.get_logger().info(f"Close event: {event}")
         super().closeEvent(event)
+
+    def set_up(self) -> None:
+        sdk.get_logger().info("Setting up")
+        self.setWindowTitle(f"Minimum Qt for Python Desktop Application v{sdk.VERSION}")

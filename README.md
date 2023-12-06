@@ -88,6 +88,8 @@ pdm install
 
    **Note**: This is undocumented but IMHO the most authenticated way to do it.
 
+8. Demonstrate how to hook the UI building
+
 ## License
 
 [Mozilla Public License Version 2.0](https://www.mozilla.org/en-US/MPL/2.0/)

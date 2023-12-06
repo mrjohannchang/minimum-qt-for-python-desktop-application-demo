@@ -24,5 +24,6 @@ def main() -> int:
             raise RuntimeError(f"Cannot open {ui_path}: {ui_file.errorString()}")
         main_window: ui.QMainWindowExt = ui_loader.load(ui_file)
         ui_file.close()
+    main_window.set_up()
     main_window.show()
     return app.exec_()

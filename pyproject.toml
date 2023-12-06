@@ -11,3 +11,6 @@ dependencies = [
 requires-python = ">=3.11, <3.13"
 readme = "README.md"
 license = {text = "MPLv2"}
+
+[project.scripts]
+desktop-app = "minimum_qt_for_python_desktop_application_demo_desktop.main:main"

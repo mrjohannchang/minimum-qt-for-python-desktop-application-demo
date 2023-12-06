@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform"]
 lock_version = "4.4"
-content_hash = "sha256:814c03521619527957c896f0a274e2c385a17000d44204216d5495d78133f93a"
+content_hash = "sha256:8c2ff6b731a6d727082dec98e689799fcc2ae9a86fc904c7991d9f55ac2d2151"
 
 [[package]]
 name = "pyside6"

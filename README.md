@@ -1,5 +1,7 @@
 # Minimum Qt for Python Desktop Application Demo
 
+![screenshot](docs/screenshot.png)
+
 **This is only for demonstrating and reference.**
 
 ## Usage
@@ -36,20 +38,6 @@ pipx install git+https://github.com/mrjohannchang/minimum-qt-for-python-desktop-
 pdm install
 ```
 
-### Packaging
-
-#### CLI app
-
-```
-pdm run pyinstaller --clean cli-demo.spec
-```
-
-#### Desktop app
-
-```
-pdm run pyinstaller --clean desktop-demo.spec
-```
-
 ### Step by step reference
 
 1. Create an empty project with [Git](https://git-scm.com/).
@@ -79,6 +67,20 @@ pdm run pyinstaller --clean desktop-demo.spec
     touch src/minimum_qt_for_python_desktop_application_demo_desktop/ui/__init__.py
     pdm run pyside6-designer
     ```
+
+5. Create the desktop application entry point. If you chose [PEP 582 – Python local packages directory](https://peps.python.org/pep-0582/) for this project and plan to use PyCharm, at the time of writing, PyCharm does not support PEP 582 directly. Please manually set `__pypackages__/<major.minor>/lib` and `src` as [Sources Root](https://www.jetbrains.com/help/pycharm/configuring-project-structure.html#mark-dir-project-view).
+
+    1. After configuring the script file in `pyproject.toml`, we need to install it:
+
+        ```
+        pdm install
+        ```
+
+    2. Then we will be able to run it:
+
+        ```
+        pdm run desktop-app
+        ```
 
 ## License
 

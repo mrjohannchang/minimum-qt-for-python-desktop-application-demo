@@ -1,0 +1,11 @@
+[project]
+name = "minimum-qt-for-python-desktop-application-demo"
+version = "1.0.0"
+description = "Minimum Qt for Python Desktop Application Demo"
+authors = [
+    {name = "Johann Chang", email = "johann.chang@outlook.com"},
+]
+dependencies = []
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MPLv2"}

@@ -58,6 +58,12 @@ pdm run pyinstaller --clean desktop-demo.spec
     git init
     ```
 
+2. Initialize the Python project with [PDM](https://pdm-project.org/). I personally prefer the project to be based on [PEP 582 – Python local packages directory](https://peps.python.org/pep-0582/) instead of [PEP 405 – Python Virtual Environments](https://peps.python.org/pep-0405/).
+
+    ```
+    pdm init
+    ```
+
 ## License
 
 [Mozilla Public License Version 2.0](https://www.mozilla.org/en-US/MPL/2.0/)

@@ -5,7 +5,9 @@ description = "Minimum Qt for Python Desktop Application Demo"
 authors = [
     {name = "Johann Chang", email = "johann.chang@outlook.com"},
 ]
-dependencies = []
-requires-python = ">=3.11"
+dependencies = [
+    "PySide6>=6.6.1",
+]
+requires-python = ">=3.11, <3.13"
 readme = "README.md"
 license = {text = "MPLv2"}

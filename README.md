@@ -64,6 +64,12 @@ pdm run pyinstaller --clean desktop-demo.spec
     pdm init
     ```
 
+3. Add [Qt for Python](https://doc.qt.io/qtforpython) as a dependent library.
+
+    ```
+    pdm add PySide6
+    ```
+
 ## License
 
 [Mozilla Public License Version 2.0](https://www.mozilla.org/en-US/MPL/2.0/)

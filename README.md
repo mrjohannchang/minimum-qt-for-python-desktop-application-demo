@@ -81,7 +81,12 @@ pdm install
         ```
         pdm run desktop-app
         ```
+
 6. Add the logging function to the custom SDK.
+
+7. Use custom `QMainWindow` class to add the window exit hook.
+
+   **Note**: This is undocumented but IMHO the most authenticated way to do it.
 
 ## License
 

@@ -70,6 +70,16 @@ pdm run pyinstaller --clean desktop-demo.spec
     pdm add PySide6
     ```
 
+4. Create a Main Window [Qt Designer UI file](https://doc.qt.io/qt-6/designer-ui-file-format.html) with [Qt Designer](https://doc.qt.io/qt-6/qtdesigner-manual.html).
+
+    ```
+    mkdir src/minimum_qt_for_python_desktop_application_demo_desktop
+    touch src/minimum_qt_for_python_desktop_application_demo_desktop/__init__.py
+    mkdir src/minimum_qt_for_python_desktop_application_demo_desktop/ui
+    touch src/minimum_qt_for_python_desktop_application_demo_desktop/ui/__init__.py
+    pdm run pyside6-designer
+    ```
+
 ## License
 
 [Mozilla Public License Version 2.0](https://www.mozilla.org/en-US/MPL/2.0/)

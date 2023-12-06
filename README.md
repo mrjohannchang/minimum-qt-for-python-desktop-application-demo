@@ -81,6 +81,7 @@ pdm install
         ```
         pdm run desktop-app
         ```
+6. Add the logging function to the custom SDK.
 
 ## License
 
